@@ -1,6 +1,6 @@
 {
   "name": "react-native-barcode-gerar-svg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Componente React Native para gerar código de barras em SVG. Usa @react-native-community/react-native-svg.",
   "repository": {
     "type": "git",

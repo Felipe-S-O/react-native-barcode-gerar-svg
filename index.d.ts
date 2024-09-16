@@ -1,6 +1,6 @@
 import React from 'react';
 
-declare class Barcode extends React.PureComponent<BarcodeProps, any> {}
+declare class BarcodeGerarSVG extends React.PureComponent<BarcodeProps, any> {}
 
 export interface BarcodeProps {
   // what the barcode code stands for
@@ -21,4 +21,4 @@ export interface BarcodeProps {
   onError?: Function;
 }
 
-export default Barcode;
+export default BarcodeGerarSVG;

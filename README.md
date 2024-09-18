@@ -1,6 +1,7 @@
 # react-native-barcode-gerar-svg
 
-Componente React Native para gerar código de barras, sem exibir texto/valor.
+Componente React Native para gerar código de barras, sem exibir texto/valor,
+retorna o PATH para ser adicionado no SVG.
 
 Uses [JsBarcode](https://github.com/lindell/JsBarcode) para codificação de dados.
 
@@ -21,7 +22,9 @@ Comece a usar o componente
 ```javascript
 import Barcode from 'react-native-barcode-gerar-svg';
 
-<Barcode value="Hello World" format="CODE128" />;
+<svg >
+   <path d=`${BarcodeGerarSVG({ value: "Olá Mundo", format: "CODE128" })}` />
+</svg>;
 ```
 
 ### Formatos suportados:

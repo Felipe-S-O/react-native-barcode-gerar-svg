@@ -49,21 +49,23 @@ const drawSvgBar = (encoding, paddingLeft = 0, options = {}) => {
   //dados binários do código de barras
   const binary = encoding.data;
 
+  let singleBarWidth = options.singleBarWidth ? options.singleBarWidth : 2
+  let height = options.height ? options.height : 100
   let barWidth = 0;
   let x = 0;
   const yFrom = 0;
 
   for (let b = 0; b < binary.length; b++) {
-    x = b * 2 + paddingLeft;
+    x = b * singleBarWidth + paddingLeft;
     if (binary[b] === '1') {
       // eslint-disable-next-line no-plusplus
       barWidth++;
     } else if (barWidth > 0) {
       rects[rects.length] = drawRect(
-        x - 2 * barWidth,
+        x - singleBarWidth * barWidth,
         yFrom,
-        2 * barWidth,
-        100,
+        singleBarWidth * barWidth,
+        height,
       );
       barWidth = 0;
     }
@@ -94,7 +96,7 @@ const drawSvgBars = (encodings, options = {}) => {
 };
 
 export default function BarcodeGerarSVG(props) {
-  const { value, format } = props;
+  const { value, format, singleBarWidth, maxWidth, height, } = props;
 
   const encoder = barcodes[format];
   const linearEncodings = encode(value, encoder, props);

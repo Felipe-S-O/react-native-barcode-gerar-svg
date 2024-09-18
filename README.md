@@ -52,24 +52,8 @@ Você pode encontrar mais informações sobre os formatos de código de barras s
     <td>Largura de uma única barra (padrão: 2)</td>
   </tr>
   <tr>
-    <td><code>maxWidth</code></td>
-    <td>Largura máxima do código de barras (padrão: indefinido, sem limitação)</td>
-  </tr>
-  <tr>
     <td><code>height</code></td>
     <td>Altura do código de barras (padrão: 100)</td>
-  </tr>
-  <tr>
-    <td><code>lineColor</code></td>
-    <td>Cor das barras e do texto (padrão: #000000)</td>
-  </tr>
-  <tr>
-    <td><code>backgroundColor</code></td>
-    <td>Cor de fundo do código de barras (padrão: #FFFFFF)</td>
-  </tr>
-  <tr>
-    <td><code>onError</code></td>
-    <td>Manipulador para código de barras inválido do formato selecionado</td>
   </tr>
 </table>
 
